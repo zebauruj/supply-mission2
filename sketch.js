@@ -27,12 +27,7 @@ function setup() {
 	groundSprite=createSprite(width/2, height-35, width,10);
 	groundSprite.shapeColor=color(255);
 	
-	box1=createSprite(400,660,200,20);
-	box1.shapeColor="red";
-	box2=createSprite(300,620,20,100);
-	box2.shapeColor="red";
-	box3=createSprite(500,620,20,100);
-	box3.shapeColor="red";
+	
 	engine = Engine.create();
 	world = engine.world;
 
@@ -61,12 +56,17 @@ function setup() {
 
 
 function draw() {
-	rectMode(CENTER);
+	
 	background(0);
 	packageSprite.x= packageBody.position.x 
 	packageSprite.y= packageBody.position.y 
 	drawSprites();
-   
+   rectMode(CENTER);
+	fill("red");
+	rect(box1.position.x,box1.position.y,200,10);
+	rect(box2.position.x,box2.position.y,20,100);
+	rect(box3.position.x,box3.position.y,20,100);
+	
   
 }
 
